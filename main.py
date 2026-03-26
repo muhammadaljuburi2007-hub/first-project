@@ -1,6 +1,6 @@
 """
 
-a code to code text and decode it 
+a code to encode text and decode it 
 
 """
 import time

@@ -4,7 +4,7 @@ a code to encode text and decode it
 
 """
 import time
-
+import os
 
 
 secr={'a' : "30" , 'b' : "87", 'c' : "67",'d' : "65",'e' : "63", 'f' : "58",'g' : "56",'h' : "54",'i' : "52",'j' : "50",'k' : "49",'l' : "47",'m' : "45",'n' : "43",'o' : "41",'p' : "38",'q' : "36",'r' : "34",'s' : "32",'t' : "31",'u' : "29",'v' : "27",'w' : "25",'x' : "23",'y' : "21",'z' : "18",' ' : "16",'?' : "14",'.' : "12",'!' : "10",'0' : "09",'1' : "07",'2' : "05",'3' : "03", '4' : "01",'5' : "02",'6' : "04",'7' : "06",'8' : "08",'9' : "11"}
@@ -48,18 +48,18 @@ def decros(decr ,text):
 
 
 #---RUNNING---CODE---
-if __name__ == "__main__" :
-    sld = str(input("1 to code , 0 to decode : ")).strip()
-    if sld == '1' :
-        sld = str(input("your text : "))    
-        sld = sld.lower()
-        print (secros(secr,sld))
-    elif sld == '0' :
-        sld = str(input("your text : ")).strip()
-        print (decros(decr,sld))
+try :
+    if __name__ == "__main__" :
+        sld = str(input("1 to code , 0 to decode : ")).strip()
+        if sld == '1' :
+            sld = str(input("your text : "))    
+            sld = sld.lower()
+            print (secros(secr,sld))
+        elif sld == '0' :
+            sld = str(input("your text : ")).strip()
+            print (decros(decr,sld))
         
 
-time.sleep(1000)
-
-
-
+    time.sleep(1000)
+except KeyboardInterrupt :
+    print("")
